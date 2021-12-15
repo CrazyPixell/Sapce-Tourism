@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- js -->
+    <script src="js/dest.js" defer></script>
+
+    <title>Space tourism website</title>
+  </head>
+  <body class="destination">
+    <a class="skip-to-content" data-focus="true" href="#main"
+      >Skip to content</a
+    >
+    <!-- header -->
+    <header class="primary-header flex">
+      <div class="logo-box">
+        <img src="./assets/shared/logo.svg" alt="Space tourism logo" />
+      </div>
+      <!-- mobile-btn -->
+      <button
+        class="mobile-nav-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Menu</span>
+      </button>
+      <!-- navigation -->
+      <nav>
+        <ul
+          id="primary-navigation"
+          class="primary-navigation underline-indicators flex"
+          data-visible="false"
+        >
+          <li>
+            <a
+              class="ff-sans-cond text-light uppercase letter-spacing-2"
+              href="index.html"
+              ><span aria-hidden="true">00</span>Home</a
+            >
+          </li>
+          <li class="active">
+            <a
+              class="ff-sans-cond text-light uppercase letter-spacing-2"
+              href="destination.html"
+              ><span aria-hidden="true">01</span>Destination</a
+            >
+          </li>
+          <li>
+            <a
+              class="ff-sans-cond text-light uppercase letter-spacing-2"
+              href="crew.html"
+              ><span aria-hidden="true">02</span>Crew</a
+            >
+          </li>
+          <li>
+            <a
+              class="ff-sans-cond text-light uppercase letter-spacing-2"
+              href="technology.html"
+              ><span aria-hidden="true">03</span>Technology</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- main -->
+    <main id="main" class="grid-container grid-container--destination flow">
+      <h1 class="numbered-title">
+        <span aria-hidden="true">01</span> Pick your destination
+      </h1>
+      <!-- image -->
+
+      <!-- moon -->
+      <picture id="moon-image" class="destination-img-box">
+        <source srcset="assets/destination/image-moon.webp" type="image/webp" />
+        <img
+          class="destination-img rotate"
+          src="assets/destination/image-moon.png"
+          alt="Moon"
+        />
+      </picture>
+
+      <!-- mars -->
+      <picture class="hidden destination-img-box" id="mars-image">
+        <source srcset="assets/destination/image-mars.webp" type="image/webp" />
+        <img
+          class="destination-img rotate"
+          src="assets/destination/image-mars.png"
+          alt="Mars"
+        />
+      </picture>
+
+      <!-- europa -->
+      <picture class="hidden destination-img-box" id="europa-image">
+        <source
+          srcset="assets/destination/image-europa.webp"
+          type="image/webp"
+        />
+        <img
+          class="destination-img rotate"
+          src="assets/destination/image-europa.png"
+          alt="Europa moon"
+        />
+      </picture>
+
+      <!-- titan -->
+      <picture class="hidden destination-img-box" id="titan-image">
+        <source
+          srcset="assets/destination/image-titan.webp"
+          type="image/webp"
+        />
+        <img
+          class="destination-img rotate"
+          src="assets/destination/image-titan.png"
+          alt="Titan moon"
+        />
+      </picture>
+
+      <!-- pluto -->
+      <picture class="hidden destination-img-box" id="pluto-image">
+        <source
+          srcset="assets/destination/image-pluto.webp"
+          type="image/webp"
+        />
+        <img
+          class="destination-img rotate"
+          src="assets/destination/image-pluto.png"
+          alt="Titan moon"
+        />
+      </picture>
+      <!-- miranda -->
+      <picture class="hidden destination-img-box" id="miranda-image">
+        <source
+          srcset="assets/destination/image-miranda.webp"
+          type="image/webp"
+        />
+        <img
+          class="destination-img rotate"
+          src="assets/destination/image-miranda.png"
+          alt="Titan moon"
+        />
+      </picture>
+
+      <!-- sub-navigation -->
+      <div class="tab-list underline-indicators flex" role="destlist">
+        <button
+          aria-selected="true"
+          class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          role="dest"
+          tabindex="0"
+          aria-controls="tab-moon"
+          data-dest="moon-image"
+        >
+          Moon
+        </button>
+        <button
+          aria-selected="false"
+          class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          role="dest"
+          tabindex="-1"
+          aria-controls="tab-mars"
+          data-dest="mars-image"
+        >
+          Mars
+        </button>
+        <button
+          aria-selected="false"
+          class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          role="dest"
+          tabindex="-1"
+          aria-controls="tab-europa"
+          data-dest="europa-image"
+        >
+          Europa
+        </button>
+        <button
+          aria-selected="false"
+          class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          role="dest"
+          tabindex="-1"
+          aria-controls="tab-titan"
+          data-dest="titan-image"
+        >
+          Titan
+        </button>
+        <button
+          aria-selected="false"
+          class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          role="dest"
+          tabindex="-1"
+          aria-controls="tab-pluto"
+          data-dest="pluto-image"
+        >
+          Pluto
+        </button>
+        <button
+          aria-selected="false"
+          class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          role="dest"
+          tabindex="-1"
+          aria-controls="tab-miranda"
+          data-dest="miranda-image"
+        >
+          Miranda
+        </button>
+      </div>
+
+      <!-- content -->
+      <!-- moon -->
+      <article class="destination-info" id="tab-moon" tabindex="0">
+        <h2 class="fs-800 uppercase ff-serif">Moon</h2>
+
+        <p class="text-accent">
+          See our planet as you’ve never seen it before. A perfect relaxing trip
+          away to help regain perspective and come back refreshed. While you’re
+          there, take in some history by visiting the Luna 2 and Apollo 11
+          landing sites.
+        </p>
+
+        <!-- detailes -->
+        <div class="destination-meta flex">
+          <div>
+            <h3 class="fs-200 uppercase text-accent letter-spacing-3">
+              Avg. distance
+            </h3>
+            <p class="ff-serif uppercase fs-500">384,400 km</p>
+          </div>
+
+          <div>
+            <h3 class="fs-200 uppercase text-accent letter-spacing-3">
+              Est. travel time
+            </h3>
+            <p class="ff-serif uppercase fs-500">3 days</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- mars -->
+      <article class="destination-info hidden" id="tab-mars" tabindex="0">
+        <h2 class="fs-800 uppercase ff-serif">Mars</h2>
+
+        <p class="text-accent">
+          Don’t forget to pack your hiking boots. You’ll need them to tackle
+          Olympus Mons, the tallest planetary mountain in our solar system. It’s
+          two and a half times the size of Everest!
+        </p>
+
+        <!-- detailes -->
+        <div class="destination-meta flex">
+          <div>
+            <h3 class="fs-200 uppercase text-accent letter-spacing-3">
+              Avg. distance
+            </h3>
+            <p class="ff-serif uppercase fs-500">225 mil. km</p>
+          </div>
+
+          <div>
+            <h3 class="fs-200 uppercase text-accent letter-spacing-3">
+              Est. travel time
+            </h3>
+            <p class="ff-serif uppercase fs-500">9 months</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- europa -->
+      <article class="destination-info hidden" id="tab-europa" tabindex="0">
+        <h2 class="fs-800 uppercase ff-serif">Europa</h2>
+
+        <p class="text-accent">
+          The smallest of the four Galilean moons orbiting Jupiter, Europa is a
+          winter lover’s dream. With an icy surface, it’s perfect for a bit of
+          ice skating, curling, hockey, or simple relaxation in your snug
+          wintery cabin.
+        </p>
+
+        <!-- detailes -->
+        <div class="destination-meta flex">
+          <div>
+            <h3 class="fs-200 uppercase text-accent letter-spacing-3">
+              Avg. distance
+            </h3>
+            <p class="ff-serif uppercase fs-500">628 mil. km</p>
+          </div>
+
+          <div>
+            <h3 class="fs-200 uppercase text-accent letter-spacing-3">
+              Est. travel time
+            </h3>
+            <p class="ff-serif uppercase fs-500">3 years</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- titan -->
+      <article class="destination-info hidden" id="tab-titan" tabindex="0">
+        <h2 class="fs-800 uppercase ff-serif">Titan</h2>
+
+        <p class="text-accent">
+          The only moon known to have a dense atmosphere other than Earth, Titan
+          is a home away from home (just a few hundred degrees colder!). As a
+          bonus, you get striking views of the Rings of Saturn.
+        </p>
+
+        <!-- detailes -->
+        <div class="destination-meta flex">
+          <div>
+            <h3 class="fs-200 uppercase text-accent letter-spacing-3">
+              Avg. distance
+            </h3>
+            <p class="ff-serif uppercase fs-500">1.6 bil. km</p>
+          </div>
+
+          <div>
+            <h3 class="fs-200 uppercase text-accent letter-spacing-3">
+              Est. travel time
+            </h3>
+            <p class="ff-serif uppercase fs-500">7 years</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- pluto -->
+      <article class="destination-info hidden" id="tab-pluto" tabindex="0">
+        <h2 class="fs-800 uppercase ff-serif">Pluto</h2>
+
+        <p class="text-accent">
+          Pluto is a dwarf planet that lies in the Kuiper Belt, an area full of
+          icy bodies and other dwarf planets out past Neptune. Pluto is very
+          small, only about half the width of the United States and its biggest
+          moon Charon is about half the size of Pluto. ... What's more, its path
+          is quite tilted compared to the planets.
+        </p>
+
+        <!-- detailes -->
+        <div class="destination-meta flex">
+          <div>
+            <h3 class="fs-200 uppercase text-accent letter-spacing-3">
+              Avg. distance
+            </h3>
+            <p class="ff-serif uppercase fs-500">4.67 bil. km</p>
+          </div>
+
+          <div>
+            <h3 class="fs-200 uppercase text-accent letter-spacing-3">
+              Est. travel time
+            </h3>
+            <p class="ff-serif uppercase fs-500">14 years</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- miranda -->
+      <article class="destination-info hidden" id="tab-miranda" tabindex="0">
+        <h2 class="fs-800 uppercase ff-serif">Miranda</h2>
+
+        <p class="text-accent">
+          Like Frankenstein's monster, Miranda looks like it was pieced together
+          from parts that didn't quite merge properly. At about 500 km in
+          diameter, it's only one-seventh as large as Earth's moon, a size that
+          seems unlikely to support much tectonic activity.
+        </p>
+
+        <!-- detailes -->
+        <div class="destination-meta flex">
+          <div>
+            <h3 class="fs-200 uppercase text-accent letter-spacing-3">
+              Avg. distance
+            </h3>
+            <p class="ff-serif uppercase fs-500">2.77 bil. km</p>
+          </div>
+
+          <div>
+            <h3 class="fs-200 uppercase text-accent letter-spacing-3">
+              Est. travel time
+            </h3>
+            <p class="ff-serif uppercase fs-500">9 years</p>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
