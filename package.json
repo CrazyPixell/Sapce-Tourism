@@ -1,0 +1,25 @@
+{
+  "name": "space-tourism",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prefix:css": "postcss --use autoprefixer -b 'last 3 versions' css/style.css -o css/style.prefix.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrazyPixell/Space-Tourism.git"
+  },
+  "author": "Anton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CrazyPixell/Space-Tourism/issues"
+  },
+  "homepage": "https://github.com/CrazyPixell/Space-Tourism#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "concat": "^1.0.3",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0"
+  }
+}
